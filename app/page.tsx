@@ -195,19 +195,31 @@ const archiveProjects = [
   },
 ];
 
-const skills = [
-  "Agent 工作流设计",
-  "Prompt 策略",
-  "模型选型与评测",
-  "AI 异常与兜底",
-  "需求分析",
-  "MVP 验证",
-  "A/B 测试",
-  "用户研究",
-  "Figma / Axure",
-  "Unity / Godot",
-  "SQL / SPSS / Tableau",
-  "Claude Code / Codex / Coze",
+const skillStages = [
+  {
+    index: "01",
+    label: "DISCOVER",
+    title: "理解问题",
+    skills: ["需求分析", "用户研究"],
+  },
+  {
+    index: "02",
+    label: "ORCHESTRATE",
+    title: "组织 AI",
+    skills: ["Agent 工作流", "Prompt 策略", "模型选型与评测", "异常与兜底"],
+  },
+  {
+    index: "03",
+    label: "BUILD",
+    title: "构建体验",
+    skills: ["Figma / Axure", "Unity / Godot", "Claude Code / Codex / Coze"],
+  },
+  {
+    index: "04",
+    label: "VALIDATE",
+    title: "验证结果",
+    skills: ["MVP 验证", "A/B 测试", "SQL / SPSS / Tableau"],
+  },
 ];
 
 export default function Home() {
@@ -597,12 +609,38 @@ export default function Home() {
           </div>
 
           <div className="skills-block">
-            <div>
+            <div className="skills-heading">
               <p className="kicker">TOOLKIT</p>
               <h2>能力地图</h2>
+              <p>不是工具清单，而是一条从问题发现到数据验证的 AI 产品闭环。</p>
             </div>
-            <div className="skill-cloud">
-              {skills.map((skill) => <span key={skill}>{skill}</span>)}
+            <div className="capability-map" aria-label="AI 产品能力闭环：理解问题、组织 AI、构建体验、验证结果">
+              <div className="capability-core">
+                <div>
+                  <span>AI PRODUCT LOOP</span>
+                  <strong>让能力沿着<br />真实任务流动</strong>
+                </div>
+                <div className="capability-count" aria-label="四个产品阶段，十二项核心能力">
+                  <p><strong>4</strong><span>个产品阶段</span></p>
+                  <p><strong>12</strong><span>项核心能力</span></p>
+                </div>
+              </div>
+              <ol className="capability-loop">
+                {skillStages.map((stage) => (
+                  <li key={stage.index}>
+                    <div className="stage-head">
+                      <span className="stage-index">{stage.index}</span>
+                      <div>
+                        <small>{stage.label}</small>
+                        <h3>{stage.title}</h3>
+                      </div>
+                    </div>
+                    <div className="stage-skills">
+                      {stage.skills.map((skill) => <span key={skill}>{skill}</span>)}
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
         </section>
