@@ -910,6 +910,10 @@ summary {
   box-shadow: 0 16px 34px rgba(24, 31, 62, 0.16);
 }
 
+.project-visual img.crop-left-5 {
+  clip-path: inset(0 0 0 5px);
+}
+
 .project-index,
 .project-type {
   position: absolute;

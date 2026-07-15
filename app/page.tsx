@@ -498,7 +498,11 @@ export default function Home() {
             {flagshipProjects.map((project, projectIndex) => (
               <article className={`flagship-card card-${projectIndex + 1}`} key={project.title}>
                 <div className="project-visual">
-                  <img src={project.image} alt={project.imageAlt} />
+                  <img
+                    className={project.index === "04" ? "crop-left-5" : undefined}
+                    src={project.image}
+                    alt={project.imageAlt}
+                  />
                   <span className="project-index">{project.index}</span>
                   <span className="project-type">{project.type}</span>
                 </div>
