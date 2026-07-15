@@ -184,10 +184,10 @@ export default function Home() {
           <span>冯哲宇 · Portfolio</span>
         </a>
         <div className="nav-links">
+          <a href="#impact">数据</a>
           <a href="#projects">项目</a>
           <a href="#experience">实习</a>
           <a href="#research">研究</a>
-          <a href="#about">关于</a>
         </div>
         <a className="nav-cta" href="mailto:fengzheyu2002@cuc.edu.cn">
           联系我 <span aria-hidden="true">↗</span>
@@ -259,6 +259,125 @@ export default function Home() {
           <div className="signal-item">
             <span>内容产品 / 2023</span>
             <strong><i className="shape shape-dot" aria-hidden="true" />爱奇艺</strong>
+          </div>
+        </section>
+
+        <section className="impact-section shell" id="impact">
+          <div className="impact-heading">
+            <div>
+              <p className="kicker">IMPACT DASHBOARD / VERIFIED OUTCOMES</p>
+              <h2>用数据说明<br />产品是否有效</h2>
+            </div>
+            <p>
+              结果来自项目实验与实习复盘。保留原始统计口径，不将不同业务场景的百分比做横向绩效比较。
+            </p>
+          </div>
+
+          <div className="impact-dashboard">
+            <figure className="comparison-panel">
+              <figcaption>
+                <div>
+                  <span>Co-Dial · 对照实验</span>
+                  <strong>AI Agent 对学习协作的影响</strong>
+                </div>
+                <span className="chart-unit">单位：%</span>
+              </figcaption>
+
+              <div className="comparison-chart" role="img" aria-label="Co-Dial 实验中任务完成率从百分之七十五提升到百分之九十七，协作失衡比例从百分之五十八点三下降到百分之十六点七。">
+                <div className="compare-group">
+                  <div className="compare-label">
+                    <strong>任务完成率</strong>
+                    <span>越高越好 · +22 个百分点</span>
+                  </div>
+                  <div className="bar-line">
+                    <span>GUI 基线</span>
+                    <div className="bar-track"><i className="bar baseline" style={{ width: "75%" }} /></div>
+                    <strong>75%</strong>
+                  </div>
+                  <div className="bar-line">
+                    <span>AI + MR</span>
+                    <div className="bar-track"><i className="bar result" style={{ width: "97%" }} /></div>
+                    <strong>97%</strong>
+                  </div>
+                </div>
+
+                <div className="compare-group">
+                  <div className="compare-label">
+                    <strong>协作失衡比例</strong>
+                    <span>越低越好 · -41.6 个百分点</span>
+                  </div>
+                  <div className="bar-line">
+                    <span>GUI 基线</span>
+                    <div className="bar-track"><i className="bar baseline" style={{ width: "58.3%" }} /></div>
+                    <strong>58.3%</strong>
+                  </div>
+                  <div className="bar-line">
+                    <span>AI + MR</span>
+                    <div className="bar-track"><i className="bar result" style={{ width: "16.7%" }} /></div>
+                    <strong>16.7%</strong>
+                  </div>
+                </div>
+              </div>
+            </figure>
+
+            <aside className="growth-panel" aria-label="小米增长实验结果">
+              <div className="growth-title">
+                <span>小米 · 增长实验</span>
+                <strong>把优化假设放进真实漏斗</strong>
+              </div>
+              <div className="donut-row">
+                <div className="donut donut-80" role="img" aria-label="百分之八十的 A/B 实验取得正向结果">
+                  <span><strong>80%</strong><small>正向实验</small></span>
+                </div>
+                <div className="delta-block">
+                  <span>最佳方案</span>
+                  <strong>+13.6%</strong>
+                  <small>支付转化率提升</small>
+                </div>
+              </div>
+              <div className="experiment-scale">
+                <span>10+ 组 A/B 测试</span>
+                <span>5,500 万+ 活动曝光</span>
+                <span>2 项功能迭代</span>
+              </div>
+            </aside>
+          </div>
+
+          <div className="evidence-ledger" aria-label="项目证据规模">
+            <div className="ledger-heading">
+              <span>EVIDENCE SCALE</span>
+              <strong>从样本、测试到迭代</strong>
+            </div>
+            <div className="ledger-item">
+              <strong>5,000</strong>
+              <span>条内容样本</span>
+              <small>百度 · 图文创作</small>
+            </div>
+            <div className="ledger-item">
+              <strong>20</strong>
+              <span>组模型测试</span>
+              <small>百度 · AI 短剧</small>
+            </div>
+            <div className="ledger-item">
+              <strong>100+</strong>
+              <span>条儿童反馈</span>
+              <small>Media Cube</small>
+            </div>
+            <div className="ledger-item">
+              <strong>26</strong>
+              <span>项实验指标</span>
+              <small>Co-Dial</small>
+            </div>
+            <div className="ledger-item">
+              <strong>4</strong>
+              <span>个课堂班级</span>
+              <small>真实场景试用</small>
+            </div>
+            <div className="ledger-item">
+              <strong>3</strong>
+              <span>轮产品迭代</span>
+              <small>行为数据驱动</small>
+            </div>
           </div>
         </section>
 
