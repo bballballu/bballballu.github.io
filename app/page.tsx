@@ -69,6 +69,30 @@ const flagshipProjects = [
     link: "https://weixin.qq.com/sph/Amm3bnpN96",
     linkLabel: "查看演示视频",
   },
+  {
+    index: "04",
+    type: "独立游戏 · Vibe Coding",
+    title: "趋光本能",
+    subtitle: "在模型捷径之外，建立真实的空间规则",
+    period: "个人项目",
+    role: "独立开发 · Godot / Claude Code",
+    intro:
+      "第一次使用 Godot，借助 Claude Code 独立完成一款 2.5D 游戏，在完整开发与调试过程中积累 Vibe Coding 经验。",
+    image: "/projects/phototaxis-instinct.jpg",
+    imageAlt: "独立游戏趋光本能 Pygmalion 的主菜单画面",
+    metrics: [
+      { value: "1", label: "款独立完成游戏" },
+      { value: "2.5D", label: "空间图层系统" },
+      { value: "0→1", label: "Godot 开发实践" },
+    ],
+    points: [
+      "首次使用 Godot，借助 Claude Code 独立推进游戏实现，在真实项目中建立 Vibe Coding 的协作与调试方法。",
+      "解决 2.5D 图层排序问题时，识别出模型会直接套用常见的 Y 坐标排序方案，却无法自动理解素材真实的对角线空间关系。",
+      "由此形成新的开发判断：先理解具体素材与场景规则，再约束模型生成方案，而不是直接接受通用代码答案。",
+    ],
+    link: "https://store.steampowered.com/app/3820340/_Pygmalion/",
+    linkLabel: "访问 Steam 商店页",
+  },
 ];
 
 const internships = [
@@ -462,7 +486,7 @@ export default function Home() {
         <section className="section shell" id="projects">
           <div className="section-heading">
             <div>
-              <p className="kicker">SELECTED WORK / 01—03</p>
+              <p className="kicker">SELECTED WORK / 01—04</p>
               <h2>项目经历</h2>
             </div>
             <p className="section-note">

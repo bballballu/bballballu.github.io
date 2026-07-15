@@ -874,6 +874,10 @@ summary {
   background: #111722;
 }
 
+.card-4 .project-visual {
+  background: #dfeff3;
+}
+
 .project-visual {
   min-height: 560px;
   position: relative;
