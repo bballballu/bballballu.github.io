@@ -260,7 +260,7 @@ export default function Home() {
                 打开完整简历 <span aria-hidden="true">↗</span>
               </a>
             </div>
-            <div className="hero-location">北京 / 上海 · AI 产品与创新体验机会</div>
+            <div className="hero-location">北京 / 杭州 · AI 产品与创新体验机会</div>
           </div>
 
           <aside className="hero-card" aria-label="个人简介">
