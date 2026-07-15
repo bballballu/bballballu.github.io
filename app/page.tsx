@@ -1,6 +1,6 @@
 const flagshipProjects = [
   {
-    index: "01",
+    index: "04",
     type: "AI 素养教育 · 0→1 产品",
     title: "Media Cube",
     subtitle: "让儿童看见、判断并指挥 AI",
@@ -46,7 +46,7 @@ const flagshipProjects = [
     ],
   },
   {
-    index: "03",
+    index: "01",
     type: "AI 创作工具 · 3D 交互",
     title: "漫创 2.0",
     subtitle: "用空间约束提高漫画生成的可控性",
@@ -70,7 +70,7 @@ const flagshipProjects = [
     linkLabel: "查看演示视频",
   },
   {
-    index: "04",
+    index: "03",
     type: "独立游戏 · Vibe Coding",
     title: "趋光本能",
     subtitle: "在模型捷径之外，建立真实的空间规则",
@@ -247,6 +247,10 @@ const skillStages = [
 ];
 
 export default function Home() {
+  const orderedFlagshipProjects = [...flagshipProjects].sort((a, b) =>
+    a.index.localeCompare(b.index)
+  );
+
   return (
     <main>
       <a className="skip-link" href="#content">
@@ -495,11 +499,11 @@ export default function Home() {
           </div>
 
           <div className="flagship-list">
-            {flagshipProjects.map((project, projectIndex) => (
+            {orderedFlagshipProjects.map((project, projectIndex) => (
               <article className={`flagship-card card-${projectIndex + 1}`} key={project.title}>
                 <div className="project-visual">
                   <img
-                    className={project.index === "04" ? "crop-left-5" : undefined}
+                    className={project.title === "趋光本能" ? "crop-left-5" : undefined}
                     src={project.image}
                     alt={project.imageAlt}
                   />
