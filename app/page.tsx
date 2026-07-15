@@ -226,8 +226,10 @@ export default function Home() {
 
           <aside className="hero-card" aria-label="个人简介">
             <div className="portrait-wrap">
-              <img src="/profile.png" alt="冯哲宇证件照" />
-              <span className="portrait-code">FZ</span>
+              <img className="portrait-photo" src="/profile.png" alt="冯哲宇证件照" />
+              <span className="portrait-code" aria-hidden="true">
+                <img src="/brand-logo.jpg" alt="" />
+              </span>
             </div>
             <div>
               <p className="mini-label">HELLO, I&apos;M</p>
