@@ -1,0 +1,462 @@
+CONTENT
+01 窥 / Hardware interactive device
+硬件交互装置，2021
+
+
+
+02 走之 HiLand / Mobile application design
+移动应用设计，2022
+
+
+
+03 芭莎女孩喝纤茶，一键生成时尚大片！
+H5 interactive work
+H5 交互作品，2022
+
+
+
+04 妙笔生画·绘动百年展览
+Exhibition Design
+展览设计，2023
+窥·Hardware interactive device·硬件交互装置，2021
+
+
+
+
+1      装置概念提出
+       Device concept proposed
+                                      In recent years, there have been numerous
+                                      incidents of people living alone in danger
+                                      and distress, and the issue of living alone
+                                      safety has become a hot topic in society.
+                                      Compared to adult men, women are generally
+                                      in a weaker position in terms of strength and
+近 年 来， 独 居 者 遇 险 遇 难 事 件 屡 屡 发 生， 独   stamina, and they are more likely to become
+居 安 全 问 题 也 成 为社会上的热点话题。相比            targets of perpetrators. Therefore, we created
+于 成 年 男 性， 女 性 在 力 气、 体 力 方 面 一 般 处   the interactive installation "Peep" with the
+于 弱 势 地 位， 她 们更容易成为施害者侵害的             theme of women living alone.
+对 象。 由 此， 我 们 创 作 了 以 独 居 女 性 为 主 题
+的交互装置《窥》。                             This work is intended to discuss the social
+                                      issue of women living alone in safety by
+本作品意在以数字艺术的方式讨论女性独居                   means of digital art, hoping to draw the
+安 全 这 一 社 会 议 题，希望引起体验者对此社            attention and focus of those who experience
+会现象的关注与重视。                            this social phenomenon.
+
+
+
+
+                                                                  窥        peep
+
+
+
+
+                                                                     扫码可查看视频
+
+
+  冯哲宇 马雨萱
+  Hardware interactive device
+  硬件交互装置·2021
+窥·Hardware interactive device·硬件交互装置，2021
+
+
+
+
+  2       设计过程
+          Designing process
+
+
+  # 用户研究
+     User research
+
+  在作品设计之前，我们首先对女性独居现状进行了网络探索，总结出女性独
+  居的需求与痛点。随后，通过问卷调查法访谈法等方式对一些独居女性进行
+  了调研，并提炼出用户画像。
+
+  Before the design of the work, we firstly explored the network on the   小张 打工人
+  current situation of women living alone, and summarized the needs       大城市独居女性
+  and pain points of women living alone. Then, we conducted a research
+  on some women living alone by questionnaire method and interview
+  method, and refined the user profile.
+
+
+
+
+  # 装置硬件设计方案
+     Device hardware design scheme
+
+  本装置搭建为长方体形状的实体装置，我们将装置的一面装饰成门，使装置
+  内外的世界分割开来。右边内侧墙上是 led 串灯摆成的小偷标记，左边内侧
+  墙是各种各样的快递单和外卖单。在装置内部我们放置了电脑，通过按动门
+  把手上的按钮进而进行场景画面切换，来感受独居女性被人偷窥的恐惧感。
+
+  The installation is built as a solid installation in the shape of a
+  rectangle. We decorated one side of the installation as a door to
+  divide the world inside and outside of the installation. On the inner
+  wall on the right is a thief's mark made of led string lights, and on
+  the inner wall on the left is a variety of delivery orders and take-
+  out orders. We placed a computer inside the installation, and by
+  pressing the button on the door handle and then switching the
+  scenes, we can feel the fear of a woman living alone being spied on.     装置外观
+
+
+
+
+          装置内部 - 血手印快递单                                     装置内部 - 小偷标记灯带
+窥·Hardware interactive device·硬件交互装置，2021
+
+
+  # 交互流程设计方案
+     Interactive process design plan
+
+  在交互流程上，作品的设计重点为在作品中体现                              In terms of the interactive process, the design of the work
+  独居女性的恐慌；在形式上，作品意在将被动观                              focuses on reflecting the panic of women living alone in the
+  赏与主动演绎有机结合，真正调动体验者的积极                              work; in terms of form, the work intends to combine passive
+                                                     viewing with active interpretation to truly mobilize the
+  性，使体验者感受到装置含义。
+                                                     enthusiasm of the experiencer and make the experiencer
+                                                     feel the meaning of the installation.
+
+
+
+
+              人物模型跟随体验者动作                                             按下门把手后，画面变成窥探的眼球
+                                                                       眼球根据体验者距门距离放大缩小
+
+
+
+
+  3        技术实现
+           Technical realization
+
+
+
+  # 距离检测 场景切换
+     Distance detection scene switching
+
+  利用 Arduino 超声波传感器发送超声波脉冲，并自动检测是否有
+  信号返回，随后，用 pulseln() 函数获取到测距，当人与装置的
+  距离大于 20cm 时，场景从眼球切换至常规房间场景。
+
+  The Arduino ultrasonic sensor is used to send ultrasonic
+  pulses and automatically detect whether a signal is returned.
+  Subsequently, the pulseln() function is used to obtain the
+  distance measurement, and when the distance between the
+  person and the device is greater than 20cm, the scene is
+  switched from the eye to the regular room scene.
+
+
+  # 动作识别 场景复刻
+  Action recognition scene replication
+
+  利用 Kinect 检测体验者活动并复刻至场景中。
+
+  Use Kinect to detect the activity of the
+  experiencer and replicate it to the scene.extracted.                        Kinect
+走之 HiLand·Mobile application design·移动应用设计，2022
+
+
+
+
+                                             走之 HiLand
+                                             足不能出户，却依旧心怀旅游理想
+
+
+
+
+   1        产品概述
+            Product Overview
+
+   “走之 Hiland”是一款为足不能出户，却依旧心怀旅游理想的人们设计的一款 app。
+   本产品地图地点为节点，媒介，用户可以在地图上选择自己心仪的地点一探究竟，欣赏美景；也可以在推荐页
+   面随意浏览，一睹感兴趣的风景名胜。不仅仅通过图文和视频，“走之 Hiland”更通过“带你直播看风景”
+   的方式打造自己的核心竞争力，以此来为用户提供更加随心，更加具有沉浸感的线上旅行体验。
+
+   "Go Hiland" is an app designed for people who can't leave home but still have the ideal of traveling.
+   With the map location as the node and the medium, users can choose their favorite location
+   on the map to explore and enjoy the beautiful scenery; they can also browse through the
+   recommended pages to see the scenic spots they are interested in. Not only through graphics
+   and videos, "Go Hiland" also builds its core competitiveness by "taking you live to see the
+   scenery", so as to provide users with a more casual and more immersive online travel experience.
+
+
+
+
+   2        产品说明
+            Product Information
+
+                                           产品功能结构图
+走之 HiLand·Mobile application design·移动应用设计，2022
+
+
+    # 核心功能逻辑图
+       Core Function Logic Diagram                                      返回
+
+                                                                                                  头像
+                                                                                                                                                   解释内容
+                                                                                                 名字                                                页面跳转
+                                                                                                                                                   交互说明
+                                                                         点赞                            设置
+
+
+
+
+3
+                                                                        下周                       消息
+                                                                         本周                      以后
+
+
+
+        营销方案
+                                                                                                 取消预约
+
+
+                                                                        图片                       时间
+                                                                                                  地点名称
+
+
+        Marketing Solutions
+
+                                                                                                        个人主页
+【产品策略（Product）】
+                                                                  搜索地点
+
+- 差异化设计 Differentiated design
+- 以地图为呈现方式、以地点为节点 Map-based
+presentation and location-based nodes
+- 加入直播、观看实时街景 Join live streaming,
+watch live street view                                                           用户双指
+                                                                                 触屏拉大
+                                                                                                                       用户双指
+                                                                                                                       触屏拉大                                 3D立体
+                                                                                                                                                            真实场景
+
+                                                                                                加入心愿单
+【价格策略（Price）】
+- 在 获 得 一 定 用 户 群 体 后， 为 想 获 得 更 高 关
+注 度 的 用 户 提 供 推 广 购 买 功 能 After gaining             推荐                           心愿单
+
+a certain user base, provide promotional                    地图浏览（第一阶段）                        地图浏览（第阶段）                            地图浏览（第阶段）
+purchase function for users who want to gain
+higher attention                                                                发起直播                          链接蓝牙
+
+【渠道策略（Place）】                                  发起人                                   结束直播
+
+- 与 VR 产品厂商合作，设计可以外接 vr 设备
+的 直 播 观 看 场 景 Cooperate with VR product
+manufacturers to design live viewing
+                                                                                                                                         网络错误
+scenarios that can be connected to vr                                                  直播内容                                             点击任意位置重试
+                                                                                                                                                            网络错误
+devices                                                                                                                      搜4蓝牙
+
+
+
+
+【促销策略（Promotion）】                              评论
+
+
+- 获得用户 Get Users
+- 提高用户粘性 Improve user stickiness                            直播发起页面                                蓝牙链接页面                               网络错误页面
+- 与 KOL 合作 Cooperation with KOL                                                推荐内容
+- 线下营销 Offline Marketing                                        搜索
+                                                                的内容
+
+
+
+                                                    向í互动
+                                                    表示不喜欢                                                             观看直播
+                                                    系统将不会
+                                                    推荐ì内容                                                   向右滑动
+                                                                图片                                          加入心愿单
+                                                                                                                                                          向右滑动
+                                                                                                                                                          返回
+
+                                                                                                       预约直播    取ÎÌ
+                                                                                  点赞                           发ÉÈ
+                                                                 介绍图片                                          ♦
+                                                                 内容                                    观看直播    有直播
+                                                         相关内容                                 评论
+                                                         直播推荐
+                                                                                              预约相关内容
+                                                                                              的直播
+
+                                                                                                                        评论
+
+                                                                              内容推荐页面                                                 直播观看页面
+
+                                                                                                 搜索心愿单内容                返回
+
+                                                    收藏心愿                                         心愿单
+
+                                                                                                                    ୧
+                                                                                                实景图片                心愿hg
+                                                                                                  点½取ï
+                                                                                                  心愿ð加
+
+                                                                                                地点名
+                                                                                                                      地点名称
+                                                                                                                     具体位置
+                                                                                                                     观看直播                            链接蓝牙
+                                                                                                                                                   发起直播
+                                                                                                             通过向右滑动
+                                                                                                             实现心愿单、内容推荐
+、
+                                                                                                             地图页面的跳转
+
+                                                                               心愿单                                                   心愿hg页
+芭莎女孩喝纤茶，一键生成时尚大片！·H5 interactive work·H5 交互作品，2022
+
+
+
+
+                                                                                          扫码即刻体验
+
+
+
+
+1        用户调研
+         User Research
+
+
+# 项目目的
+   Project Purpose
+
+洞察 Z 世代年轻群体的喜好和需求围绕“芭莎女孩喝纤茶”的核心主题，建立目标群体对品牌的认知度、好感度和美誉度，
+实现品牌和产品在年轻群体中的快速渗透。
+
+Insight into the preferences and needs of young people in the Z-generation around the core theme of "Bazaar
+girls drink slim tea", to build the target group's awareness, goodwill and reputation of the brand, to achieve rapid
+penetration of the brand and products in young people.
+
+
+# PEST 分析
+   PEST analysis
+【政治环境】
+1. 国家政府加快了控糖措施的出台，一些饮料企业迅速调整了产品配方，走上了减糖的发展路线。
+2. 国家鼓励传统纸媒转型寻求发现新的销售渠道和宣传方式
+【经济环境】
+1，不同品牌跨界联名，不仅提高了双方品牌的知名度，而且会使消费者感到更有新意，更愿意为之消费。
+2. 联名款达到个立品兼具两种特色”的效果，使得产品更具溢价空间。
+【社会环境】
+1. 跨界合作、联名破圈成为社会流行趋势
+2. 社会上品牌泛滥、产品同质化严重。
+【技术环境】
+1. 纤茶品牌彻底告别了防腐剂的标签。由于元气森林耗资 50 亿元自建的超级工厂，引人的全球领先的无菌生产线具备行
+业最高标准 LOG6 水亚，纤茶在料液、包装、环境的生产过程实现无菌，不再添加苯酸钠、山梨酸钾等防腐剂
+2. 时尚芭莎自制微信小程序 MiniBAZAAR
+芭莎女孩喝纤茶，一键生成时尚大片！·H5 interactive work·H5 交互作品，2022
+
+
+
+
+ 2   设计过程
+     Designing process
+
+
+  # 交互流程设计方案
+    Interactive process design plan
+
+
+
+
+  # 流程图细化设计
+    Flowchart refinement design
+
+
+
+
+                                         # 故事线设计
+                                           Story-line design
+芭莎女孩喝纤茶，一键生成时尚大片！·H5 interactive work·H5 交互作品，2022
+
+
+  # 人物场景设计
+    Character Scene Design
+
+            开始页面             选择页面        穿搭页面
+
+
+
+
+           故事线页面             广告页面       分享页面
+
+
+
+
+3    其他信息
+     Other Information
+
+        本项目获 2022 第 14 届全国大学生广告艺术大赛互动类优秀奖
+妙笔生画·绘动百年展览·Exhibition Design·展览设计，2023
+
+
+
+
+* 本项目获 2023 年大学生创新创业计划北京市级创新创意项目立项
+
+
+
+
+1        项目背景
+         Project Background
+
+2022 年是中国动画诞生百年。为了讲述中国动画百年成就，2022 年末，国家图书馆社会教育部依托“国图讲坛”，与中
+国传媒大学动画学院合作举办了“妙笔生画 绘动时代——致敬中国动画百年”系列讲座（5 场）。
+为进一步宣传推广动画艺术，更好地传播弘扬中华优秀传统文化，推动图书馆阅读资源走进高校读者群体，营造馆校共建的
+良好阅读氛围，国家图书馆社会教育部和中国传媒大学动画学院拟在前期友好合作的基础上，集中优势资源和专业力量共建
+共享，共同打造 2023“阅动文津 妙笔生画”读书季系列活动，以展览、讲座、读书会、社会实践等丰富立体的活动内容
+服务广大师生和全国读者。
+
+The year 2022 marks the centenary of the birth of Chinese animation. In order to tell the story of the
+achievements of Chinese animation, the Social Education Department of the National Library, in cooperation with
+the School of Animation of the Communication University of China, organized a series of lectures (5) in late 2022,
+based on the "National Library Lecture Theatre", entitled "A Tribute to China In late 2002, the Social Education
+Department of the National Library of China, in cooperation with the School of Animation of the Communication
+University of China, held a series of lectures (5) entitled "The Art of Animation: A Tribute to China's Centennial".
+To further promote the art of animation, better disseminate and promote the excellent Chinese traditional culture,
+promote the library reading resources into the university readers, and create a good reading atmosphere for the
+library and the university, the Social Education Department of the National Library and the School of Animation
+of the Communication University of China intend to build on the basis of the previous friendly cooperation, pool
+the advantageous resources and professional strength to jointly build and share the 2023 The series of activities
+of "Read and Draw" reading season will serve teachers and students and readers nationwide with rich three-
+dimensional activities such as exhibitions, lectures, reading sessions and social practice.
+妙笔生画·绘动百年展览·Exhibition Design·展览设计，2023
+
+
+
+
+ 2   展览设计方案
+     Exhibition Design Solutions
+
+   # 场地规划
+    Site Planning
+
+
+
+
+   # 交互区设置
+    Interaction area setting
+妙笔生画·绘动百年展览·Exhibition Design·展览设计，2023
+
+
+   # 主题解析
+      Theme Analysis
+
+
+
+
+   一代代中国动画人，传承匠心精神，不断守正创新，创作出一部部优秀动画作品，铸就了巍巍百年中国动画史。
+   中国动画跌宕起伏的发展史与新中国不断发展密切相关，在新时代的背景下，中国动画更是紧扣时代精神，用
+   当代的语言诠释着中国悠悠五千年的文化底蕴和独树一帜的东方世界观，真正做到了文化输出，展示文化自信。
+   在世界舞台上展现了中国动画的独特风采，讲好了一个个动人的“中国故事”。
+
+   Generations of Chinese animators have inherited the spirit of craftsmanship and innovation,
+   creating outstanding animation works and forging a century of Chinese animation history. The
+   history of Chinese animation is closely related to the continuous development of new China.
+
+
+
+
+   # 视觉设计
+      Visual Design
+
