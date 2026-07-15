@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   description:
     "冯哲宇的 AI 产品经理与生成式体验设计作品集：AIGC 创作工具、AI Agent、用户增长、交互研究与产品实践。",
   keywords: ["AI 产品经理", "AIGC", "生成式体验设计", "Agent", "用户研究", "冯哲宇"],
+  icons: {
+    icon: "/brand-logo.jpg",
+    shortcut: "/brand-logo.jpg",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

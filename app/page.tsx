@@ -180,7 +180,9 @@ export default function Home() {
 
       <nav className="site-nav" aria-label="主导航">
         <a className="brand" href="#top" aria-label="返回首页">
-          <span className="brand-mark">FZ</span>
+          <span className="brand-mark" aria-hidden="true">
+            <img src="/brand-logo.jpg" alt="" />
+          </span>
           <span>冯哲宇 · Portfolio</span>
         </a>
         <div className="nav-links">
