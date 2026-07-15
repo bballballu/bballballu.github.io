@@ -1745,7 +1745,7 @@ summary {
 }
 
 .footer-main::after {
-  content: "FZ";
+  content: "FZY";
   position: absolute;
   right: clamp(28px, 7vw, 110px);
   top: 40px;
