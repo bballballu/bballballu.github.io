@@ -1553,9 +1553,11 @@ summary {
 .capability-map {
   position: relative;
   overflow: hidden;
+  border: 1px solid var(--line);
   border-radius: 30px;
-  background: var(--ink);
-  color: white;
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 0 16px 38px rgba(25, 41, 95, 0.08);
 }
 
 .capability-map::before {
@@ -1565,7 +1567,7 @@ summary {
   position: absolute;
   right: -160px;
   top: -190px;
-  border: 62px solid var(--lime);
+  border: 62px solid var(--white);
   border-radius: 50%;
   opacity: 0.14;
   pointer-events: none;
@@ -1577,6 +1579,8 @@ summary {
   justify-content: space-between;
   gap: 36px;
   padding: 36px 38px 32px;
+  background: var(--blue);
+  color: var(--white);
 }
 
 .capability-core > div:first-child > span {
@@ -1629,14 +1633,15 @@ summary {
   grid-template-columns: repeat(4, 1fr);
   margin: 0;
   padding: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid var(--line);
 }
 
 .capability-loop > li {
   min-height: 282px;
   position: relative;
   padding: 28px 24px 30px;
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid var(--line);
+  background: var(--white);
   transition: background 0.22s ease, transform 0.22s ease;
 }
 
@@ -1646,7 +1651,7 @@ summary {
 
 .capability-loop > li:hover {
   z-index: 2;
-  background: rgba(23, 71, 232, 0.28);
+  background: var(--blue-soft);
   transform: translateY(-4px);
 }
 
@@ -1662,8 +1667,9 @@ summary {
   place-items: center;
   border-radius: 50%;
   background: var(--lime);
-  color: var(--ink);
+  color: var(--blue-deep);
   font-size: 13px;
+  box-shadow: 0 0 0 4px var(--white);
 }
 
 .stage-head {
@@ -1678,21 +1684,22 @@ summary {
   flex: 0 0 46px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(221, 254, 117, 0.55);
+  border: 1px solid rgba(23, 71, 232, 0.36);
   border-radius: 50%;
-  color: var(--lime);
+  background: var(--blue-soft);
+  color: var(--blue);
   font-size: 12px;
   font-variant-numeric: tabular-nums;
   transition: background 0.22s ease, color 0.22s ease;
 }
 
 .capability-loop > li:hover .stage-index {
-  background: var(--lime);
-  color: var(--ink);
+  background: var(--blue);
+  color: var(--white);
 }
 
 .stage-head small {
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--blue);
   font-size: 9px;
   letter-spacing: 0.1em;
 }
@@ -1712,10 +1719,10 @@ summary {
 
 .stage-skills span {
   padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  border: 1px solid var(--line);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.055);
-  color: rgba(255, 255, 255, 0.78);
+  background: var(--paper);
+  color: #4b556e;
   font-size: 11px;
   line-height: 1.35;
 }
@@ -1993,7 +2000,7 @@ summary {
   }
 
   .capability-loop > li:nth-child(n + 3) {
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid var(--line);
   }
 
   .capability-loop > li::after {
@@ -2169,7 +2176,7 @@ summary {
   .capability-loop > li,
   .capability-loop > li:nth-child(odd) {
     min-height: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid var(--line);
     border-left: 0;
   }
 
