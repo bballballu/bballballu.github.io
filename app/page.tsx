@@ -10,12 +10,18 @@ const flagshipProjects = [
       "面向小学五、六年级儿童，把实体卡牌、AI 共创平台与本地化课程包组合成一套可教学、可观察、可迭代的 AI 素养产品。",
     image: "/projects/media-cube-cards.png",
     imageAlt: "Media Cube 儿童 AI 素养卡牌体系",
-    metrics: ["4 个班课堂试用", "100+ 条行为反馈", "3 轮产品迭代"],
+    metrics: [
+      { value: "4", label: "个班课堂试用" },
+      { value: "100+", label: "条行为反馈" },
+      { value: "3", label: "轮产品迭代" },
+    ],
     points: [
       "围绕“AI 能做什么、如何协作、作品属于谁”建立三层素养目标，把抽象概念转化为卡牌规则、任务链路与反馈机制。",
       "设计作品上传、AI 看图、儿童纠错、多版本共创与归属反思的完整链路，并用热力图将模型理解过程显性化。",
       "独立完成前后端与模型 API 接入，跑通任务配置、图像理解、共创生成、作品编辑和即时反馈闭环。",
     ],
+    link: "https://soulspark.magicube.studio/",
+    linkLabel: "访问产品网站",
   },
   {
     index: "02",
@@ -28,7 +34,11 @@ const flagshipProjects = [
       "面向小学低年级数学合作学习，将实体操作、MR 空间反馈与 AI 教师 Agent 结合，让系统理解儿童的动作与对话并在关键节点介入。",
     image: "/projects/codial-system.png",
     imageAlt: "Co-Dial 混合现实协作学习系统与硬件结构",
-    metrics: ["任务完成率 75%→97%", "协作失衡 58.3%→16.7%", "26 项实验指标"],
+    metrics: [
+      { value: "75→97%", label: "任务完成率" },
+      { value: "58.3→16.7%", label: "协作失衡比例" },
+      { value: "26", label: "项实验指标" },
+    ],
     points: [
       "构建“实体数学对象操作—MR 反馈—同伴协作—AI 过程引导”的产品路径，避免 AI 直接给出答案。",
       "将 Unity 动作事件与语音转写传入 Coze 工作流，设计分层追问、轮次控制、分工提醒、纠错与安全边界。",
@@ -46,13 +56,18 @@ const flagshipProjects = [
       "以卡牌式视觉中介层和 3D 场景编排承接创作者意图，解决提示词门槛高、构图透视不可控及跨画格角色漂移。",
     image: "/projects/manchu-result.png",
     imageAlt: "漫创 2.0 漫画草图与生成结果对照",
-    metrics: ["5 类结构化卡牌", "3D 镜头可视化", "完整生成链路联调"],
+    metrics: [
+      { value: "5", label: "类结构化卡牌" },
+      { value: "3D", label: "空间镜头控制" },
+      { value: "1", label: "条完整生成链路" },
+    ],
     points: [
       "把创建角色与场景、画格编排、动作调整、虚拟摄像机和生成画面串成一条可回溯工作流。",
       "用角色卡、场景卡、动作卡、道具卡和画格卡，把复杂生成条件转化为拖拽、组合与参数调整。",
       "使用 Godot 实现画格状态、3D 编排、角色动作、镜头控制与 AI 生成链路，支持视觉属性跨画格复用。",
     ],
     link: "https://weixin.qq.com/sph/Amm3bnpN96",
+    linkLabel: "查看演示视频",
   },
 ];
 
@@ -70,7 +85,11 @@ const internships = [
       "针对故事、教学、科普等脚本类型完成 20 组模型 A/B 测试，从质量、一致性、稳定性与耗时沉淀选型策略。",
       "分析 5,000 条小红书笔记，归纳 18 类高频主题与典型版式，形成 AI 图文模板、智能编排和关键行为指标方案。",
     ],
-    stats: ["20 组模型测试", "5,000 条内容样本", "18 类内容主题"],
+    stats: [
+      { value: "20", label: "组模型测试" },
+      { value: "5,000", label: "条内容样本" },
+      { value: "18", label: "类高频主题" },
+    ],
   },
   {
     company: "小米",
@@ -85,7 +104,11 @@ const internships = [
       "围绕会员中心关键转化节点执行 10+ 组 A/B 测试，80% 的实验取得正向结果，最佳方案带动支付转化率提升 13.6%。",
       "归纳 100+ 条核心客诉，拆解权益理解、支付、续费与内容匹配问题，推动 2 项会员体验功能迭代。",
     ],
-    stats: ["5,500 万+ 曝光", "13.6% 转化提升", "80% 实验成功率"],
+    stats: [
+      { value: "5,500万+", label: "活动累计曝光" },
+      { value: "+13.6%", label: "最佳转化提升" },
+      { value: "80%", label: "实验正向率" },
+    ],
   },
   {
     company: "爱奇艺",
@@ -100,7 +123,11 @@ const internships = [
       "针对遥控器非触控、低输入效率与强路径依赖，结合点击 / 展示比识别低效入口，协助精简 3 处支付前跳转。",
       "维护电视端会员营收看板，以 Excel 透视表与交叉分析定位业务波动，支持促销资源位排期与复盘。",
     ],
-    stats: ["Top 3 竞品追踪", "精简 3 处跳转", "周度行业洞察"],
+    stats: [
+      { value: "Top 3", label: "竞品持续追踪" },
+      { value: "3", label: "处冗余跳转精简" },
+      { value: "周度", label: "行业洞察报告" },
+    ],
   },
 ];
 
@@ -111,6 +138,12 @@ const research = [
     subtitle: "Anchoring and Negotiating Authorship in Child-AI Co-Creation",
     detail:
       "研究 60 名农村儿童的人机协作创作行为，提出“灵魂锚点”和“真实感阈值”，解释 AI 重绘后视觉可识别性与心理归属感之间的断裂，并将结论转化为意图一致性、工作透明度与用户控制感设计原则。",
+    stats: [
+      { value: "60", label: "名儿童样本" },
+      { value: "2", label: "个核心概念" },
+      { value: "CCF-A", label: "会议级别" },
+    ],
+    link: "https://dl.acm.org/doi/10.1145/3772363.3798533",
   },
   {
     venue: "ACM MM 2025 · CCF-A · 第一作者",
@@ -118,6 +151,12 @@ const research = [
     subtitle: "A Multimodal Mixed Reality Experience",
     detail:
       "构建女书文化多模态 MR 体验系统，完成文化内容梳理、用户研究、沉浸式交互设计与原型验证，探索 HCI 技术在文化遗产传播中的产品化路径。",
+    stats: [
+      { value: "1", label: "套 MR 体验系统" },
+      { value: "多模态", label: "交互形态" },
+      { value: "CCF-A", label: "会议级别" },
+    ],
+    link: "https://dl.acm.org/doi/10.1145/3746027.3756145",
   },
 ];
 
@@ -186,10 +225,10 @@ export default function Home() {
           <span>冯哲宇 · Portfolio</span>
         </a>
         <div className="nav-links">
-          <a href="#impact">数据</a>
-          <a href="#projects">项目</a>
           <a href="#experience">实习</a>
+          <a href="#projects">项目</a>
           <a href="#research">研究</a>
+          <a href="#about">关于</a>
         </div>
         <a className="nav-cta" href="mailto:fengzheyu2002@cuc.edu.cn">
           联系我 <span aria-hidden="true">↗</span>
@@ -214,8 +253,8 @@ export default function Home() {
               关注多模态生成、AI 协作与创作工具。用产品方法把模型能力接到真实用户、真实任务与真实反馈里。
             </p>
             <div className="hero-actions">
-              <a className="button button-lime" href="#projects">
-                查看精选项目 <span aria-hidden="true">↘</span>
+              <a className="button button-lime" href="#experience">
+                查看实习经历 <span aria-hidden="true">↘</span>
               </a>
               <a className="text-link light-link" href="/files/冯哲宇-双页简历.pdf" target="_blank">
                 打开完整简历 <span aria-hidden="true">↗</span>
@@ -247,26 +286,49 @@ export default function Home() {
           </aside>
         </header>
 
-        <section className="experience-signal shell" aria-label="关键履历">
-          <div className="signal-intro">
-            <span>EXPERIENCE</span>
-            <strong>3 段大厂产品实习</strong>
-          </div>
-          <div className="signal-item">
-            <span>AI 产品 / 2025</span>
-            <strong><i className="shape shape-square" aria-hidden="true" />百度</strong>
-          </div>
-          <div className="signal-item">
-            <span>用户增长 / 2023</span>
-            <strong><i className="shape shape-ring" aria-hidden="true" />小米</strong>
-          </div>
-          <div className="signal-item">
-            <span>内容产品 / 2023</span>
-            <strong><i className="shape shape-dot" aria-hidden="true" />爱奇艺</strong>
+        <section className="section section-tint" id="experience">
+          <div className="shell">
+            <div className="section-heading compact">
+              <div>
+                <p className="kicker">EXPERIENCE / 2023—2026</p>
+                <h2>实习经历</h2>
+              </div>
+              <p className="section-note">三段经历共享同一条主线：理解用户决策，组织复杂链路，用数据验证结果。</p>
+            </div>
+
+            <div className="timeline">
+              {internships.map((item, index) => (
+                <article className="timeline-item" key={item.company}>
+                  <div className="timeline-marker" aria-hidden="true">0{index + 1}</div>
+                  <div className="timeline-head">
+                    <div>
+                      <span className={`company-pill ${item.tone}`}>{item.company}</span>
+                      <p>{item.team}</p>
+                    </div>
+                    <div className="timeline-role">
+                      <strong>{item.role}</strong>
+                      <span>{item.period}</span>
+                    </div>
+                  </div>
+                  <div className="stat-strip" aria-label={`${item.company} 关键成果`}>
+                    {item.stats.map((stat) => (
+                      <div className="stat-item" key={stat.label}>
+                        <strong>{stat.value}</strong>
+                        <span>{stat.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="timeline-summary">{item.summary}</p>
+                  <ul className="outcome-list">
+                    {item.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}
+                  </ul>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className="impact-section shell" id="impact">
+        <section className="impact-section shell" id="impact" hidden>
           <div className="impact-heading">
             <div>
               <p className="kicker">IMPACT DASHBOARD / VERIFIED OUTCOMES</p>
@@ -389,7 +451,7 @@ export default function Home() {
           <div className="section-heading">
             <div>
               <p className="kicker">SELECTED WORK / 01—03</p>
-              <h2>把复杂能力，组织成<br />用户能掌控的产品</h2>
+              <h2>项目经历</h2>
             </div>
             <p className="section-note">
               从问题定义、核心链路与 Agent 策略，到技术实现、课堂实验和行为数据验证。
@@ -413,7 +475,12 @@ export default function Home() {
                   <p className="project-subtitle">{project.subtitle}</p>
                   <p className="project-intro">{project.intro}</p>
                   <ul className="metric-row" aria-label={`${project.title} 关键成果`}>
-                    {project.metrics.map((metric) => <li key={metric}>{metric}</li>)}
+                    {project.metrics.map((metric) => (
+                      <li key={metric.label}>
+                        <strong>{metric.value}</strong>
+                        <span>{metric.label}</span>
+                      </li>
+                    ))}
                   </ul>
                   <details className="case-details">
                     <summary>展开案例拆解 <span aria-hidden="true">＋</span></summary>
@@ -423,7 +490,7 @@ export default function Home() {
                   </details>
                   {project.link ? (
                     <a className="project-link" href={project.link} target="_blank" rel="noreferrer">
-                      查看演示视频 <span aria-hidden="true">↗</span>
+                      {project.linkLabel} <span aria-hidden="true">↗</span>
                     </a>
                   ) : null}
                 </div>
@@ -432,48 +499,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section section-tint" id="experience">
-          <div className="shell">
-            <div className="section-heading compact">
-              <div>
-                <p className="kicker">EXPERIENCE / 2023—2026</p>
-                <h2>从增长现场到<br />AIGC 创作工具</h2>
-              </div>
-              <p className="section-note">三段经历共享同一条主线：理解用户决策，组织复杂链路，用数据验证结果。</p>
-            </div>
-
-            <div className="timeline">
-              {internships.map((item, index) => (
-                <article className="timeline-item" key={item.company}>
-                  <div className="timeline-marker" aria-hidden="true">0{index + 1}</div>
-                  <div className="timeline-head">
-                    <div>
-                      <span className={`company-pill ${item.tone}`}>{item.company}</span>
-                      <p>{item.team}</p>
-                    </div>
-                    <div className="timeline-role">
-                      <strong>{item.role}</strong>
-                      <span>{item.period}</span>
-                    </div>
-                  </div>
-                  <p className="timeline-summary">{item.summary}</p>
-                  <ul className="outcome-list">
-                    {item.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}
-                  </ul>
-                  <div className="stat-strip">
-                    {item.stats.map((stat) => <span key={stat}>{stat}</span>)}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="section shell" id="research">
           <div className="section-heading compact">
             <div>
               <p className="kicker">RESEARCH AS PRODUCT INSIGHT</p>
-              <h2>把研究发现<br />转译为设计原则</h2>
+              <h2>研究经历</h2>
             </div>
             <p className="section-note">研究不是单独的成果陈列，而是对 AI 产品边界、信任与控制感的长期理解。</p>
           </div>
@@ -486,7 +516,18 @@ export default function Home() {
                 </div>
                 <h3>{item.title}</h3>
                 <p className="research-subtitle">{item.subtitle}</p>
+                <div className="research-stats" aria-label={`${item.title} 研究数据`}>
+                  {item.stats.map((stat) => (
+                    <div key={stat.label}>
+                      <strong>{stat.value}</strong>
+                      <span>{stat.label}</span>
+                    </div>
+                  ))}
+                </div>
                 <p>{item.detail}</p>
+                <a className="research-link" href={item.link} target="_blank" rel="noreferrer">
+                  查看 ACM 论文 <span aria-hidden="true">↗</span>
+                </a>
               </article>
             ))}
           </div>
@@ -497,7 +538,7 @@ export default function Home() {
             <div className="section-heading compact">
               <div>
                 <p className="kicker">EARLY WORK / 2021—2023</p>
-                <h2>交互、内容与<br />空间叙事基础</h2>
+                <h2>早期作品</h2>
               </div>
               <a className="text-link" href="/files/冯哲宇-早期作品集.pdf" target="_blank">
                 查看 13 页原始作品集 <span aria-hidden="true">↗</span>
@@ -508,7 +549,10 @@ export default function Home() {
                 <article className="archive-card" key={project.title}>
                   <div className="archive-image"><img src={project.image} alt={project.alt} /></div>
                   <div className="archive-copy">
-                    <span>{project.year} · {project.type}</span>
+                    <div className="archive-meta">
+                      <strong>{project.year}</strong>
+                      <span>{project.type}</span>
+                    </div>
                     <h3>{project.title}</h3>
                     <p>{project.note}</p>
                   </div>
@@ -522,7 +566,7 @@ export default function Home() {
           <div className="about-grid">
             <div className="about-intro">
               <p className="kicker">ABOUT / EDUCATION</p>
-              <h2>产品、技术与<br />设计的交叉训练</h2>
+              <h2>教育经历</h2>
               <p>
                 我喜欢把看似“聪明”的技术拆成用户能理解、能修改、能信任的交互过程，也习惯在上线后继续通过行为与数据寻找答案。
               </p>
@@ -534,7 +578,7 @@ export default function Home() {
                 <div>
                   <span>2020—2024</span>
                   <strong>中国传媒大学 · 数字媒体艺术 本科</strong>
-                  <small>GPA 3.88 / 4.00 · 专业排名 2 / 34</small>
+                  <small>GPA <b>3.88 / 4.00</b> · 专业排名 <b>2 / 34</b></small>
                 </div>
               </div>
             </div>
