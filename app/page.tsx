@@ -292,13 +292,6 @@ export default function Home() {
             <p className="hero-lead">
               关注多模态生成、AI 协作与创作工具。用产品方法把模型能力接到真实用户、真实任务与真实反馈里。
             </p>
-            <a className="agent-case-entry" href="/agent-case">
-              <span>
-                <small>岗位定制案例 · R&amp;D AGENT</small>
-                <strong>查看研发 Agent 产品案例</strong>
-              </span>
-              <span className="agent-case-arrow" aria-hidden="true">↗</span>
-            </a>
             <div className="hero-actions">
               <a className="button button-lime" href="#experience">
                 查看实习经历 <span aria-hidden="true">↘</span>
