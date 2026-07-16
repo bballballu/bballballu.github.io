@@ -1063,6 +1063,189 @@ summary {
   line-height: 1.7;
 }
 
+.development-case-body {
+  padding: 4px 0 26px;
+}
+
+.workflow-lede {
+  margin: 0 0 22px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--lime);
+  background: #f4f7ff;
+  color: #34415f;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.case-details .development-workflow {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.workflow-step {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.workflow-index {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.workflow-step h4,
+.development-evidence h4,
+.debug-card h4 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.workflow-step p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.workflow-step small {
+  display: block;
+  margin-top: 8px;
+  color: var(--blue);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.development-evidence {
+  margin-top: 28px;
+}
+
+.evidence-kicker {
+  margin: 0 0 6px;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.document-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.document-card {
+  min-height: 172px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 15px;
+  background: #eef2ff;
+}
+
+.document-card:nth-child(2) {
+  background: #eff8f4;
+}
+
+.document-card:nth-child(3) {
+  background: #f6f3e9;
+}
+
+.document-card > span {
+  color: var(--blue);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.document-card strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.document-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.debug-evidence {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.debug-card {
+  padding: 18px;
+  border-radius: 16px;
+  background: #11182b;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.debug-card-blue {
+  background: var(--blue);
+}
+
+.debug-label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--lime);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.debug-card h4 {
+  color: #fff;
+  font-size: 15px;
+}
+
+.debug-card p {
+  margin: 10px 0 0;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.debug-card b {
+  color: #fff;
+  font-weight: 600;
+}
+
+.development-boundary {
+  margin: 18px 0 0;
+  padding: 16px 18px;
+  border: 1px dashed rgba(23, 71, 232, 0.32);
+  border-radius: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.development-boundary b {
+  color: var(--ink);
+}
+
 .project-link {
   margin-top: 20px;
   color: var(--blue);
@@ -2102,6 +2285,26 @@ summary {
 
   .project-meta span:last-child {
     text-align: left;
+  }
+
+  .workflow-step {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .workflow-index {
+    width: 36px;
+    height: 36px;
+  }
+
+  .document-grid,
+  .debug-evidence {
+    grid-template-columns: 1fr;
+  }
+
+  .document-card {
+    min-height: 0;
   }
 
   .metric-row {

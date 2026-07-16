@@ -71,19 +71,19 @@ const flagshipProjects = [
   },
   {
     index: "03",
-    type: "独立游戏 · Vibe Coding",
+    type: "独立游戏 · AI Coding 实践",
     title: "趋光本能",
-    subtitle: "在模型捷径之外，建立真实的空间规则",
+    subtitle: "用文档化工作流约束模型，把复杂剧情系统做成可维护 Demo",
     period: "个人项目",
     role: "独立开发 · Godot / Claude Code",
     intro:
-      "第一次使用 Godot，借助 Claude Code 独立完成一款 2.5D 游戏，在完整开发与调试过程中积累 Vibe Coding 经验。",
+      "第一次使用 Godot，借助 Claude Code 独立完成一款 2.5D 剧情游戏；通过开发进度、主线状态机和踩坑指南三份活文档，持续约束实现范围、跨场景状态与调试策略。",
     image: "/projects/phototaxis-instinct.jpg",
     imageAlt: "独立游戏趋光本能 Pygmalion 的主菜单画面",
     metrics: [
-      { value: "1", label: "款独立完成游戏" },
-      { value: "2.5D", label: "空间图层系统" },
-      { value: "0→1", label: "Godot 开发实践" },
+      { value: "3", label: "份持续维护文档" },
+      { value: "40", label: "类开发问题复盘" },
+      { value: "9", label: "个核心场景精调" },
     ],
     points: [
       "首次使用 Godot，借助 Claude Code 独立推进游戏实现，在真实项目中建立 Vibe Coding 的协作与调试方法。",
@@ -500,7 +500,10 @@ export default function Home() {
 
           <div className="flagship-list">
             {orderedFlagshipProjects.map((project, projectIndex) => (
-              <article className={`flagship-card card-${projectIndex + 1}`} key={project.title}>
+              <article
+                className={`flagship-card card-${projectIndex + 1} ${project.title === "趋光本能" ? "development-card" : ""}`}
+                key={project.title}
+              >
                 <div className="project-visual">
                   <img
                     className={project.title === "趋光本能" ? "crop-left-5" : undefined}
@@ -526,11 +529,108 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <details className="case-details">
-                    <summary>展开案例拆解 <span aria-hidden="true">＋</span></summary>
-                    <ol>
-                      {project.points.map((point) => <li key={point}>{point}</li>)}
-                    </ol>
+                  <details className={`case-details ${project.title === "趋光本能" ? "development-case" : ""}`}>
+                    <summary>
+                      {project.title === "趋光本能" ? "展开 AI Coding 开发工作流" : "展开案例拆解"}
+                      <span aria-hidden="true">＋</span>
+                    </summary>
+                    {project.title === "趋光本能" ? (
+                      <div className="development-case-body">
+                        <p className="workflow-lede">
+                          我没有把 Claude Code 当成一次性代码生成器，而是把需求、状态和错误沉淀为长期上下文：每轮实现先确认范围与依赖，完成后用实机结果更新文档，让下一轮协作从已验证的事实继续。
+                        </p>
+
+                        <ol className="development-workflow" aria-label="趋光本能 AI Coding 开发工作流">
+                          <li className="workflow-step">
+                            <span className="workflow-index">01</span>
+                            <div>
+                              <h4>定义里程碑与验收边界</h4>
+                              <p>把 Demo 拆成主线闭环、核心场景和基础系统，在开发进度文档中持续维护已完成、待完成与按日期记录的工作日志。</p>
+                              <small>输出：本轮目标 · 涉及场景 · 完成条件</small>
+                            </div>
+                          </li>
+                          <li className="workflow-step">
+                            <span className="workflow-index">02</span>
+                            <div>
+                              <h4>把需求翻译成可执行上下文</h4>
+                              <p>先定位相关场景、脚本、对白 JSON 与资源，再让 Claude Code 进行局部实现；对模型给出的通用方案，结合真实素材和空间规则判断是否可用。</p>
+                              <small>原则：先理解项目约束，再生成或修改代码</small>
+                            </div>
+                          </li>
+                          <li className="workflow-step">
+                            <span className="workflow-index">03</span>
+                            <div>
+                              <h4>用状态机管理跨场景依赖</h4>
+                              <p>为 flags、道具和演出 cue 记录“在哪里设置、在哪里检查、产生什么效果”，串起对话、解谜、存读档和场景切换，避免漏 set、漏 check 与剧情重复触发。</p>
+                              <small>覆盖：主线节点 · 触发条件 · 道具流转 · 持久态</small>
+                            </div>
+                          </li>
+                          <li className="workflow-step">
+                            <span className="workflow-index">04</span>
+                            <div>
+                              <h4>实机复现、定位根因、最小修复</h4>
+                              <p>不直接接受模型的第一答案；从可见症状回溯输入、状态和时序，确认根因后只修改必要模块，并保留被否决方案与原因。</p>
+                              <small>方法：复现路径 → 根因假设 → 局部修复 → 对照验证</small>
+                            </div>
+                          </li>
+                          <li className="workflow-step">
+                            <span className="workflow-index">05</span>
+                            <div>
+                              <h4>回归关键链路并沉淀约束</h4>
+                              <p>验证剧情触发、切场景、存读档、演出续播和视觉层级；把确认过的问题写入踩坑指南，同时同步进度与状态机，形成下一轮 AI Coding 的可靠上下文。</p>
+                              <small>闭环：实现 → 实测 → 文档更新 → 下一轮复用</small>
+                            </div>
+                          </li>
+                        </ol>
+
+                        <div className="development-evidence">
+                          <p className="evidence-kicker">THREE LIVING DOCUMENTS</p>
+                          <h4>把项目知识从聊天记录变成可复用资产</h4>
+                          <div className="document-grid">
+                            <article className="document-card">
+                              <span>01 / PROGRESS</span>
+                              <strong>开发进度</strong>
+                              <p>里程碑、系统结构、TODO 与按日期工作日志，控制每轮修改范围并记录真实完成状态。</p>
+                            </article>
+                            <article className="document-card">
+                              <span>02 / STATE</span>
+                              <strong>主线状态机</strong>
+                              <p>集中维护 flag、道具、cue、触发位置和持久态，检查跨场景依赖与存档安全。</p>
+                            </article>
+                            <article className="document-card">
+                              <span>03 / DEBUG</span>
+                              <strong>踩坑指南</strong>
+                              <p>按“现象—原因—修法—教训”沉淀 40 类问题，把一次调试转化为后续约束。</p>
+                            </article>
+                          </div>
+                        </div>
+
+                        <div className="debug-evidence">
+                          <article className="debug-card">
+                            <span className="debug-label">CASE A · STATE</span>
+                            <h4>读档后剧情 Flag 全部失效</h4>
+                            <p><b>症状：</b>女鬼结尾重启后，已完成演出再次播放。</p>
+                            <p><b>根因：</b>JSON round-trip 将 StringName 键还原为 String，查询静默失败。</p>
+                            <p><b>处理：</b>读档时统一键类型，并回归“保存—退出—读取—跨场景触发”链路。</p>
+                          </article>
+                          <article className="debug-card debug-card-blue">
+                            <span className="debug-label">CASE B · SPATIAL</span>
+                            <h4>通用 Y 排序无法解释 2.5D 空间</h4>
+                            <p><b>症状：</b>角色经过斜向家具时出现错误遮挡。</p>
+                            <p><b>根因：</b>模型套用常见 Y 坐标排序，没有理解素材真实的对角线空间关系。</p>
+                            <p><b>处理：</b>用碰撞多边形对角线叉积判断前后，并以角色脚位世界坐标参与计算。</p>
+                          </article>
+                        </div>
+
+                        <p className="development-boundary">
+                          <b>本人边界：</b>AI 辅助生成与修改代码；需求拆解、架构取舍、场景判断、实机验证和最终决策由本人完成。
+                        </p>
+                      </div>
+                    ) : (
+                      <ol>
+                        {project.points.map((point) => <li key={point}>{point}</li>)}
+                      </ol>
+                    )}
                   </details>
                   {project.link ? (
                     <a className="project-link" href={project.link} target="_blank" rel="noreferrer">
